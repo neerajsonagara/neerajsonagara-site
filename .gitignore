@@ -3,3 +3,4 @@
 /linkedin/
 /neeraj photo/
 *.md
+!/.github/copilot-instructions.md
