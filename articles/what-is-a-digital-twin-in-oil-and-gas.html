@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Security: Content Security Policy + referrer policy (GitHub Pages cannot send custom HTTP headers, so these are set as meta tags) -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>What is a Digital Twin in oil &amp; gas? A practical guide | Neeraj Sonagara</title>
+<meta name="description" content="A plain-language guide to Digital Twins in oil and gas: what they are, the three layers they need, real use cases, and where to start. By Neeraj Sonagara.">
+<meta name="author" content="Neeraj Sonagara">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.neerajsonagara.com/articles/what-is-a-digital-twin-in-oil-and-gas.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What is a Digital Twin in oil &amp; gas? A practical guide">
+<meta property="og:description" content="A plain-language guide to Digital Twins in oil and gas: what they are, the three layers they need, real use cases, and where to start. By Neeraj Sonagara.">
+<meta property="og:url" content="https://www.neerajsonagara.com/articles/what-is-a-digital-twin-in-oil-and-gas.html">
+<meta property="og:site_name" content="Neeraj Sonagara">
+<meta property="og:image" content="https://www.neerajsonagara.com/assets/img/hero/banner-01-single-governed-source.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What is a Digital Twin in oil &amp; gas? A practical guide">
+<meta name="twitter:description" content="A plain-language guide to Digital Twins in oil and gas: what they are, the three layers they need, real use cases, and where to start. By Neeraj Sonagara.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1F33'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='700' fill='%2314B8A6' text-anchor='middle'%3ENS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/home.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What is a Digital Twin in oil & gas? A practical guide",
+      "description": "A plain-language guide to Digital Twins in oil and gas: what they are, the three layers they need, real use cases, and where to start. By Neeraj Sonagara.",
+      "datePublished": "2026-11-20",
+      "dateModified": "2026-11-20",
+      "mainEntityOfPage": "https://www.neerajsonagara.com/articles/what-is-a-digital-twin-in-oil-and-gas.html",
+      "image": "https://www.neerajsonagara.com/assets/img/hero/banner-01-single-governed-source.png",
+      "author": { "@type": "Person", "@id": "https://www.neerajsonagara.com/#person", "name": "Neeraj Sonagara", "url": "https://www.neerajsonagara.com/" },
+      "publisher": { "@type": "Person", "@id": "https://www.neerajsonagara.com/#person", "name": "Neeraj Sonagara" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.neerajsonagara.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.neerajsonagara.com/#articles" },
+        { "@type": "ListItem", "position": 3, "name": "What is a Digital Twin in oil & gas? A practical guide" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="../index.html" class="brand" aria-label="Neeraj Sonagara — home">
+      <img class="brand-mark" src="../assets/img/headshot.jpg" alt="Neeraj Sonagara">
+      <span class="brand-name">Neeraj Sonagara</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../experience.html">Journey</a>
+      <a href="../index.html#credentials">Credentials</a>
+      <a href="../index.html#articles" class="active">Insights</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="../assets/docs/Neeraj_Sonagara_Resume.pdf" download>Resume</a>
+      <a class="btn btn-primary" href="../index.html#contact">Let's Connect</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <header class="arthead">
+    <div class="wrap">
+      <p class="crumb"><a href="../index.html">Home</a> &nbsp;/&nbsp; <a href="../index.html#articles">Insights</a></p>
+      <h1>What is a Digital Twin in oil &amp; gas? A practical guide</h1>
+      <p class="art-meta"><span>By <b>Neeraj Sonagara</b></span><span>&middot;</span><span>Digital Twin &amp; Digital Transformation Consultant</span><span>&middot;</span><span>5 min read</span></p>
+    </div>
+  </header>
+
+  <article class="prose">
+
+<p class="lead">A Digital Twin is a living digital copy of a physical asset, such as a platform, refinery, pipeline or plant, that stays connected to real data. It lets people understand, monitor and make decisions about the asset without having to be standing next to it.</p>
+
+<p>That sounds simple, but the phrase gets used for everything from a 3D walkthrough to a full analytics platform. In oil &amp; gas the useful definition is the practical one: <strong>a Digital Twin is only as good as the information it is built on</strong>.</p>
+
+<h2>The three layers every Digital Twin needs</h2>
+<ol>
+  <li><strong>Engineering information.</strong> P&amp;IDs, 3D models, equipment lists, datasheets, tags and the documents that describe what the asset <em>is</em>.</li>
+  <li><strong>Operational data.</strong> SCADA, DCS, historians and sensors that describe what the asset is <em>doing</em> right now.</li>
+  <li><strong>Business context.</strong> Maintenance records, work orders, risk and cost data that explain what the asset <em>means</em> for the business.</li>
+</ol>
+<p>The value appears when these three are connected through shared tags and relationships, so a question like "which pump feeds this unit, what is its vibration trend, and when was it last repaired?" has one answer instead of three systems and two phone calls.</p>
+
+<h2>What oil &amp; gas companies use Digital Twins for</h2>
+<ul>
+  <li><strong>Finding information faster.</strong> One trusted place for drawings, data and documents instead of searching many systems.</li>
+  <li><strong>Maintenance and reliability.</strong> Planning work with the full history of an asset in view.</li>
+  <li><strong>Shutdowns and turnarounds.</strong> Better planning with accurate asset and equipment data.</li>
+  <li><strong>Project handover.</strong> Receiving clean, structured information from EPC contractors when a new facility goes live.</li>
+  <li><strong>Remote support and analytics.</strong> Giving specialists the context to help from anywhere, and the data foundation for predictive models.</li>
+</ul>
+
+<h2>What a Digital Twin is not</h2>
+<div class="callout"><p>A 3D model is not a Digital Twin, a dashboard is not a Digital Twin, and a software licence is not a Digital Twin. Each can be a part of one, but none of them is the foundation.</p></div>
+
+<h2>What it actually takes</h2>
+<ul>
+  <li><strong>A single source of truth</strong> for asset information, with clear ownership.</li>
+  <li><strong>Standards</strong> such as ISO 15926, ISO 14224, CFIHOS and DEXPI, so data means the same thing everywhere.</li>
+  <li><strong>Relationships, not just records.</strong> Linking equipment, tags, documents and systems, often with a knowledge graph.</li>
+  <li><strong>IT and OT connected</strong> through a governed integration layer.</li>
+  <li><strong>Governance and training</strong> so people keep using and maintaining it.</li>
+</ul>
+
+<h2>Where to start</h2>
+<p>Pick one asset and one use case with a value you can measure. Fix the information for that scope first, prove the benefit, then scale to more assets. Starting small on a solid foundation beats starting big on a fragile one.</p>
+<p>For the deeper thinking behind this, read my whitepaper, <a href="../digital-twin.html">The Digital Twin Information Philosophy</a>.</p>
+
+  </article>
+
+  <aside class="article-cta">
+    <div>
+      <h2>Planning a Digital Twin or transformation program?</h2>
+      <p>I'm happy to talk it through. A short conversation often saves months.</p>
+      <a class="hbtn hbtn--primary" href="../index.html#contact">Get in touch</a>
+      <a class="hbtn hbtn--glass" href="../assets/docs/Neeraj_Sonagara_Resume.pdf" download>Download resume</a>
+    </div>
+  </aside>
+
+  <section class="related">
+    <h2>Keep reading</h2>
+    <a href="why-digital-twin-programs-fail.html">Why Digital Twin programs fail without an information foundation</a>
+    <a href="digital-twin-vs-digital-model.html">Digital Twin vs digital model: what actually creates business value?</a>
+    <a href="../digital-twin.html">The Digital Twin Information Philosophy (whitepaper)</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <strong>NEERAJ SONAGARA</strong>
+      <span>Digital Twin &amp; Digital Transformation Consultant</span>
+      <span class="footer-sub">Oil &amp; Gas | Enterprise Architecture | Industrial Data</span>
+    </div>
+    <nav aria-label="Footer">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../experience.html">Journey</a>
+      <a href="../digital-twin.html">Whitepaper</a>
+      <a href="../index.html#articles">Insights</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <a href="https://www.linkedin.com/in/neeraj-sonagara-45359984/" target="_blank" rel="me noopener">LinkedIn</a>
+    <span>&copy; <span id="year"></span> Neeraj Sonagara. All rights reserved.</span>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
