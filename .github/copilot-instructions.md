@@ -15,6 +15,8 @@ Repo: `neerajsonagara/neerajsonagara-site` (public). Local copy: `D:\NeerajSonag
 - Years of experience is computed live in `script.js` from `CAREER_START = 2008-07-01` (shown as e.g. "18.4+"). Meta tags are static "18+".
 - Missing photos are handled by `data-fallback` in `script.js`. `assets/img/portrait-hero.jpg` and `photo-5.jpg` do not exist yet; their 404s are expected.
 
+- Visual-first rule (owner's instruction): prefer icons, flow diagrams, metric chips and short labels over paragraphs on every page; keep full text behind `<details>` toggles. The hero skyline (`assets/img/oilgas-skyline.svg`, shown via `.hero-vector`) must stay tall only at the far left/right edges and low in the middle so it never overlaps the hero text or portrait; keep the hero bottom padding that gives it its own band.
+
 ## Hosting and deployment
 - **GitHub Pages**, deployed from branch `main`, folder `/` (root). Pushing to `main` publishes the site within a minute or two.
 - Custom domain via the `CNAME` file (`www.neerajsonagara.com`). Do not delete or edit it.

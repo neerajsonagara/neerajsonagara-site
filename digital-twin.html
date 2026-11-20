@@ -30,6 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/home.css">
 
 <script type="application/ld+json">
 {
@@ -73,65 +74,64 @@
 
 <main id="main">
 
-  <div class="page-header">
+  <header class="arthead">
     <div class="wrap">
-      <p class="page-crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Digital Twin &amp; Whitepaper</p>
-      <p class="kicker">Concept &amp; Whitepaper</p>
+      <p class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Whitepaper</p>
       <h1>The Digital Twin Information Philosophy</h1>
-      <p>Why Digital Twin programs succeed or fail based on information discipline &mdash; not the platform you buy. A working framework and a full whitepaper, drawn from <span class="exp-years">17.9+</span> years building Digital Twins for Chevron and ADNOC.</p>
-    </div>
-  </div>
-
-  <!-- CONCEPT FLOW -->
-  <section class="section">
-    <div class="wrap">
-      <p class="kicker center">The Framework</p>
-      <h2 class="center">How a Digital Twin Works in Oil &amp; Gas</h2>
-      <p class="section-lead center">From physical assets on the plant floor to boardroom decisions — the five layers that turn raw engineering and operational data into a living, governed Digital Twin.</p>
-
-      <div class="dt-flow reveal">
-        <div class="dt-stage">
-          <div class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4v-4l6 4V6l6 4v11H3z"/></svg></div>
-          <h3>Physical Assets</h3>
-          <p>Refineries &amp; rotating equipment generating continuous data.</p>
-        </div>
-        <div class="dt-arrow" aria-hidden="true">&rarr;</div>
-        <div class="dt-stage">
-          <div class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="1"/><rect x="9.5" y="9.5" width="5" height="5"/><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/><line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/></svg></div>
-          <h3>IT / OT Sources</h3>
-          <p>SCADA, DCS &amp; Historians integrated with CMMS, ERP &amp; EDMS.</p>
-        </div>
-        <div class="dt-arrow" aria-hidden="true">&rarr;</div>
-        <div class="dt-stage">
-          <div class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 1 0-5.7-5.7l-1.5 1.5"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 1 0 5.7 5.7l1.5-1.5"/></svg></div>
-          <h3>Integration &amp; Governance</h3>
-          <p>ETL &amp; APIs governed by ISO&nbsp;15926, CFIHOS &amp; DEXPI.</p>
-        </div>
-        <div class="dt-arrow" aria-hidden="true">&rarr;</div>
-        <div class="dt-stage">
-          <div class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg></div>
-          <h3>Digital Twin Platform</h3>
-          <p>Contextualized model on AVEVA AIM, Kognitwin &amp; CDF.</p>
-        </div>
-        <div class="dt-arrow" aria-hidden="true">&rarr;</div>
-        <div class="dt-stage dt-stage-highlight">
-          <div class="icon-badge icon-badge--sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></div>
-          <h3>Insights &amp; Decisions</h3>
-          <p>Dashboards &amp; predictive analytics for safer, faster operations.</p>
-        </div>
+      <div class="exp-stats">
+        <span><b>Information</b>, not the platform, decides success</span>
+        <span>From <b>12</b> Chevron business units &amp; ADNOC</span>
       </div>
+    </div>
+  </header>
 
-      <p class="dt-footnote">This is the same layered approach used to deploy enterprise Digital Twin programs across 12 Chevron business units and ADNOC's enterprise asset landscape.</p>
+  <section class="hx-section" id="framework">
+    <div class="wrap">
+      <div class="hx-head reveal">
+        <span class="hx-kicker">The framework</span>
+        <h2>How a Digital Twin works in <span class="hx-grad">oil &amp; gas</span></h2>
+      </div>
+      <ol class="pipe-flow pipe-flow--5 reveal">
+        <li><span class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l6 4v-4l6 4V6l6 4v11z"/></svg></span><b>Physical assets</b><small>refineries &middot; equipment</small></li>
+        <li><span class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3"/></svg></span><b>IT / OT sources</b><small>SCADA &middot; DCS &middot; ERP</small></li>
+        <li><span class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 1 0-5.7-5.7l-1.5 1.5"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 1 0 5.7 5.7l1.5-1.5"/></svg></span><b>Integration</b><small>ETL &middot; APIs &middot; standards</small></li>
+        <li class="hl"><span class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span><b>Twin platform</b><small>AIM &middot; Kognitwin &middot; CDF</small></li>
+        <li class="val"><span class="pf-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></span><b>Decisions</b><small>dashboards &middot; analytics</small></li>
+      </ol>
     </div>
   </section>
 
-  <!-- WHITEPAPER -->
-  <section class="section section-alt">
+  <section class="hx-section hx-section--soft">
     <div class="wrap">
-      <article class="article reveal">
-        <p class="kicker center">Whitepaper</p>
-        <h2 class="center">The Information Philosophy Behind Every Successful Digital Twin</h2>
-        <p class="section-lead center">Why platforms don't build Digital Twins &mdash; information discipline does.</p>
+      <div class="hx-head reveal">
+        <span class="hx-kicker">Why they fail</span>
+        <h2>Most fail <span class="hx-grad">before they start</span></h2>
+      </div>
+      <div class="fail-grid reveal"><div class="fail"><span class="fail-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8h11v11H8z"/><path d="M5 16V5h11"/></svg></span><h3>Duplicated data</h3><p>EDMS, CMMS and ERP hold copies with no owner.</p></div><div class="fail"><span class="fail-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v10H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg></span><h3>Two languages</h3><p>OT and IT teams share no common tag structure.</p></div><div class="fail"><span class="fail-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></span><h3>Platform on a mess</h3><p>It only visualises the fragmentation faster.</p></div></div>
+      <div class="belief reveal">
+        <p>A Digital Twin is an <b>information discipline</b>, not a product.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="hx-section">
+    <div class="wrap">
+      <div class="hx-head reveal">
+        <span class="hx-kicker">The philosophy</span>
+        <h2>Five principles, <span class="hx-grad">proven at scale</span></h2>
+      </div>
+      <div class="prin-grid"><article class="prin reveal"><span class="prin-n">1</span><h3>Single source of truth</h3><p>One authoritative record. Every system reads it.</p><span class="prin-chip">6.2M documents unified</span></article><article class="prin reveal"><span class="prin-n">2</span><h3>Standards before software</h3><p>ISO 15926 &middot; ISO 14224 &middot; CFIHOS &middot; DEXPI</p><span class="prin-chip">25+ systems interoperable</span></article><article class="prin reveal"><span class="prin-n">3</span><h3>Context is the product</h3><p>Relationships matter more than raw tags.</p><span class="prin-chip">Knowledge graph</span></article><article class="prin reveal"><span class="prin-n">4</span><h3>Governance as a lifecycle</h3><p>Owners, SLAs and automated checks.</p><span class="prin-chip">300+ data contracts a day</span></article><article class="prin reveal"><span class="prin-n">5</span><h3>Architecture before automation</h3><p>TOGAF roadmap and value case first.</p><span class="prin-chip">Value first</span></article></div>
+      <div class="scale reveal">
+        <span><b>12</b> business units</span><span><b>4,000+</b> users</span><span><b>25+</b> systems</span><span><b>ADNOC</b> enterprise roadmap</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="hx-section hx-section--soft">
+    <div class="wrap">
+      <details class="paper reveal">
+        <summary>Read the full whitepaper</summary>
+        <article class="article">
 
         <h3>Introduction: The Problem Isn't the Platform</h3>
         <p>
@@ -224,11 +224,13 @@
           it. I'd welcome the conversation.
         </p>
 
-        <div class="center" style="margin-top:40px;">
-          <a class="btn btn-primary btn-lg" href="index.html#contact">Let's Talk</a>
-          <a class="btn btn-outline btn-lg" href="assets/docs/Neeraj_Sonagara_Resume.pdf" download>Download Resume</a>
-        </div>
+        
       </article>
+      </details>
+      <div class="work-more reveal">
+        <a class="hbtn hbtn--primary" href="index.html#contact">Let&rsquo;s talk</a>
+        <a class="hbtn hbtn--line" href="assets/docs/Neeraj_Sonagara_Resume.pdf" download>Download resume</a>
+      </div>
     </div>
   </section>
 
@@ -236,7 +238,11 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <span>&copy; <span id="year"></span> Neeraj Sonagara. All rights reserved.</span>
+    <div class="footer-brand">
+      <strong>NEERAJ SONAGARA</strong>
+      <span>Digital Twin &amp; Digital Transformation Consultant</span>
+      <span class="footer-sub">Oil &amp; Gas | Enterprise Architecture | Industrial Data</span>
+    </div>
     <nav aria-label="Footer">
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
@@ -245,6 +251,10 @@
       <a href="index.html#articles">Insights</a>
       <a href="index.html#contact">Contact</a>
     </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <a href="https://www.linkedin.com/in/neeraj-sonagara-45359984/" target="_blank" rel="me noopener">LinkedIn</a>
+    <span>&copy; <span id="year"></span> Neeraj Sonagara. All rights reserved.</span>
   </div>
 </footer>
 
