@@ -6,12 +6,14 @@ Repo: `neerajsonagara/neerajsonagara-site` (public). Local copy: `D:\NeerajSonag
 
 ## Stack
 - Plain static HTML, CSS and JS. **No framework, no build step, no package manager.** Do not add one.
-- Pages: `index.html` (home), `experience.html` (career journey), `digital-twin.html` (whitepaper).
-- `assets/css/style.css` (all styles, design tokens at the top: navy `#0A1F33`, teal `#14B8A6`), `assets/js/script.js` (all behaviour).
+- Pages: `index.html` (home), `hire.html` (freelance/recruiter landing page, FAQ + FAQPage schema), `experience.html` (career journey), `digital-twin.html` (whitepaper).
+- `assets/css/style.css` (base styles, header, footer, design tokens: navy `#0A1F33`, teal `#14B8A6`; also used by experience/digital-twin pages), `assets/css/home.css` (redesigned home + hire sections, loaded after style.css; classes prefixed `hx-`, `hero2`, `svc`, `case`, `step`...), `assets/js/script.js` (all behaviour).
+- Do not reuse the class names `.timeline` or `.case-tag` in new code: `style.css` already styles them for the experience page.
 - Fonts: Manrope + Inter from Google Fonts.
-- Hero banners: `assets/img/hero/banner-01..06` as `.png` + `.webp`, 1600x670, used in a `<picture>`. The hero container's aspect ratio must stay `1600/670`, otherwise the images get pillarboxed.
+- Home hero is a dark gradient hero with a portrait slot. Drop the owner's photo at `assets/img/portrait-hero.jpg` (800x1000, 4:5) and it appears automatically (white placeholder shows until then). The old banners in `assets/img/hero/` are only used as the social-share `og:image`.
+- SEO goal: rank for the owner's name, and for freelance / hire / contract Digital Twin and Digital Transformation consultant searches. Keep the H1, title and description keyword-led and keep `hire.html` + `sitemap.xml` updated.
 - Years of experience is computed live in `script.js` from `CAREER_START = 2008-07-01` (shown as e.g. "18.4+"). Meta tags are static "18+".
-- Missing photos use dashed white placeholder boxes with a "Photo needed" message. `assets/img/photo-4.jpg` and `photo-5.jpg` do not exist yet; their 404s are expected and handled by the fallback code.
+- Missing photos are handled by `data-fallback` in `script.js`. `assets/img/portrait-hero.jpg` and `photo-5.jpg` do not exist yet; their 404s are expected.
 
 ## Hosting and deployment
 - **GitHub Pages**, deployed from branch `main`, folder `/` (root). Pushing to `main` publishes the site within a minute or two.

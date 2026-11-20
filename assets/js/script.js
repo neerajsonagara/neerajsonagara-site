@@ -99,7 +99,7 @@ function animateCount(el) {
   }
   requestAnimationFrame(tick);
 }
-const trustNums = document.querySelectorAll('.trust-num');
+const trustNums = document.querySelectorAll('.trust-num, .stat-num');
 if (trustNums.length) {
   const trustObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
