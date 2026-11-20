@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Security: Content Security Policy + referrer policy (GitHub Pages cannot send custom HTTP headers, so these are set as meta tags) -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Professional Experience | Neeraj Sonagara &mdash; Digital Twin &amp; Digital Transformation Consultant</title>
 <meta name="description" content="18+ years of career history: Digital Twin Senior Consultant (EY / ADNOC), Digital Transformation Lead (Chevron), Information Management Specialist and Mechanical Engineer &mdash; Neeraj Sonagara's full professional experience.">
 <meta name="robots" content="index, follow">
@@ -73,7 +76,7 @@
 <main id="main">
 
   <div class="page-header page-header--photo">
-    <img class="page-header-bg" src="assets/img/photo-5.jpg" alt="" aria-hidden="true" onerror="this.style.display='none';">
+    <img class="page-header-bg" src="assets/img/photo-5.jpg" alt="" aria-hidden="true" data-fallback="hide">
     <div class="page-header-overlay"></div>
     <div class="wrap page-header-content">
       <p class="page-crumb light"><a href="index.html">Home</a> &nbsp;/&nbsp; Experience</p>

@@ -1,6 +1,19 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Image fallbacks (replaces inline onerror handlers, which the Content Security Policy blocks).
+// data-fallback="hide": hide a missing photo. data-fallback="placeholder": hide it and show the next sibling placeholder.
+document.querySelectorAll('img[data-fallback]').forEach(img => {
+  const fallback = () => {
+    img.style.display = 'none';
+    if (img.dataset.fallback === 'placeholder' && img.nextElementSibling) {
+      img.nextElementSibling.style.display = 'flex';
+    }
+  };
+  img.addEventListener('error', fallback);
+  if (img.complete && img.naturalWidth === 0) fallback(); // already failed before this script ran
+});
+
 // Years of experience: computed live from career start (July 2008), updates automatically every day
 const CAREER_START = new Date('2008-07-01T00:00:00');
 const yearsOfExperience = (Date.now() - CAREER_START) / (1000 * 60 * 60 * 24 * 365.25);
