@@ -431,28 +431,25 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
   .article-cta > div{ padding:30px 24px; }
 }
 
-/* ===== Hero oil & gas vector backdrop (own band below the text, no overlap) ===== */
+/* ===== Hero oil & gas vector backdrop: tall at both edges, low in the middle under the text ===== */
 .hero-vector{
   position:absolute; left:0; right:0; bottom:78px; z-index:0; pointer-events:none;
-  height:clamp(110px,11.4vw,185px);
+  aspect-ratio:1600/420;
   background:url("../img/oilgas-skyline.svg") center bottom / 100% 100% no-repeat;
 }
 .hero2 .wrap{ position:relative; z-index:1; }
-.hero2:not(.hero2--page){ padding:132px 0 262px; }
-@media (max-width:1020px){ .hero2:not(.hero2--page){ padding:120px 0 250px; } }
-@media (max-width:640px){
-  .hero2:not(.hero2--page){ padding:108px 0 190px; }
-  .hero-vector{ height:100px; background-size:auto 100%; }
-}
+.hero2:not(.hero2--page){ padding:150px 0 232px; }
+@media (max-width:1020px){ .hero2:not(.hero2--page){ padding:128px 0 240px; } }
+@media (max-width:640px){ .hero2:not(.hero2--page){ padding:108px 0 190px; } }
 
 /* Skyline echo at the bottom of the dark contact section (same drawing, inverted to light lines) */
 .cta2{ padding-bottom:210px; }
 .cta2::after{
-  content:""; position:absolute; left:0; right:0; bottom:0; height:clamp(90px,11.4vw,185px); z-index:-1; pointer-events:none;
-  background:url("../img/oilgas-skyline.svg") center bottom / 100% 100% no-repeat;
+  content:""; position:absolute; left:0; right:0; bottom:0; height:clamp(150px,21vw,300px); z-index:-1; pointer-events:none;
+  background:url("../img/oilgas-skyline.svg") center bottom / 100% auto no-repeat;
   filter:invert(1) brightness(1.4); opacity:.4;
   }
-@media (max-width:640px){ .cta2{ padding-bottom:150px; } .cta2::after{ height:90px; background-size:auto 100%; } }
+@media (max-width:640px){ .cta2{ padding-bottom:150px; } }
 
 /* ===== Visual-first components (graphics instead of long sentences) ===== */
 .hero-chips{ display:flex; flex-wrap:wrap; gap:10px; margin:0 0 34px; }
@@ -502,4 +499,51 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
   .pipe-flow{ grid-template-columns:1fr 1fr; }
   .pipe-flow li::after{ display:none !important; }
   .pipe-flow li.hl .pf-ico{ transform:scale(1.08); }
+}
+
+
+/* ===== Experience page: visual career timeline ===== */
+.exp-stats{ display:flex; flex-wrap:wrap; gap:10px; margin-top:6px; }
+.exp-stats span{ padding:9px 16px; border-radius:999px; background:#fff; border:1px solid #D3E0EA; font-size:14px; color:#46596B; box-shadow:0 6px 16px rgba(10,31,51,.05); }
+.exp-stats b{ color:var(--ink); }
+.career{ list-style:none; margin:0 auto; padding:0; max-width:980px; position:relative; }
+.career::before{ content:""; position:absolute; left:150px; top:12px; bottom:12px; width:2px; background:linear-gradient(180deg,var(--teal),#bfe6e1 80%,transparent); }
+.role{ display:grid; grid-template-columns:150px 1fr; gap:0 34px; margin-bottom:34px; position:relative; }
+.role-rail{ position:relative; text-align:right; padding-top:30px; padding-right:2px; }
+.role-year{ font-family:var(--font-head); font-weight:800; font-size:15px; color:var(--ink); display:block; padding-right:26px; }
+.role-dot{ position:absolute; right:-9px; top:34px; width:18px; height:18px; border-radius:50%; background:#fff; border:4px solid var(--teal); z-index:1; }
+.role--now .role-dot{ background:var(--teal); box-shadow:0 0 0 7px rgba(20,184,166,.2); }
+.role-card{ background:#fff; border:1px solid var(--line); border-radius:24px; padding:30px 30px 24px; box-shadow:0 12px 34px rgba(10,31,51,.06); transition:transform .25s ease, box-shadow .25s ease; }
+.role-card:hover{ transform:translateY(-4px); box-shadow:0 22px 50px rgba(10,31,51,.11); }
+.role--now .role-card{ border-color:#9ADBD3; background:linear-gradient(180deg,#F3FCFB,#fff 40%); }
+.role-top{ display:flex; justify-content:space-between; gap:16px; align-items:flex-start; margin-bottom:20px; }
+.role-top h2{ font-size:1.3rem; line-height:1.25; margin:0 0 6px; color:var(--ink); }
+.role-org{ margin:0; font-size:14.5px; color:var(--muted); }
+.role-badge{ flex-shrink:0; padding:6px 13px; border-radius:999px; background:var(--soft); border:1px solid var(--line); font-size:12.5px; font-weight:700; color:var(--teal-dark); white-space:nowrap; }
+.role--now .role-badge{ background:var(--teal); color:#04201c; border-color:transparent; }
+.role-metrics{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
+.role-metrics div{ flex:1 1 120px; padding:14px 16px; border-radius:16px; background:linear-gradient(135deg,#0B2540,#12365a); color:#fff; }
+.role-metrics b{ display:block; font-family:var(--font-head); font-size:1.45rem; line-height:1.1; color:#fff; }
+.role-metrics span{ display:block; margin-top:4px; font-size:12.5px; color:#9FD9D2; }
+.role-hl{ list-style:none; margin:0 0 18px; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; }
+.role-hl li{ position:relative; padding-left:26px; font-size:14.5px; line-height:1.45; color:var(--text); }
+.role-hl li::before{ content:""; position:absolute; left:0; top:2px; width:17px; height:17px; border-radius:50%; background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6,12.5 10.5,17 18,8'/%3E%3C/svg%3E") center/11px no-repeat; }
+.role-more{ margin-top:18px; border-top:1px solid var(--line); padding-top:6px; }
+.role-more summary{ cursor:pointer; list-style:none; padding:12px 0; font-weight:700; font-size:14px; color:var(--teal-dark); display:flex; align-items:center; gap:8px; }
+.role-more summary::-webkit-details-marker{ display:none; }
+.role-more summary::after{ content:"+"; font-size:20px; line-height:1; }
+.role-more[open] summary::after{ content:"\2013"; }
+.role-detail{ font-size:14.5px; }
+.role-detail ul{ padding-left:1.2em; margin:6px 0 12px; }
+.role-detail li{ margin-bottom:7px; line-height:1.55; color:#3C4F62; }
+.role-detail .timeline-subhead{ font-weight:700; color:var(--ink); margin:12px 0 4px; }
+@media (max-width:820px){
+  .career::before{ left:11px; }
+  .role{ grid-template-columns:1fr; gap:0; padding-left:34px; }
+  .role-rail{ text-align:left; padding:0 0 10px; }
+  .role-year{ padding-right:0; }
+  .role-dot{ left:-34px; right:auto; top:2px; }
+  .role-hl{ grid-template-columns:1fr; }
+  .role-card{ padding:24px 20px 18px; }
+  .role-top{ flex-direction:column; gap:10px; }
 }
