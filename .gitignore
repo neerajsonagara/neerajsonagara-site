@@ -1,5 +1,5 @@
-# Private/source files - not part of the published site
-hero/
-linkedin/
-neeraj photo/
+# Private/source files - not part of the published site (top-level only)
+/hero/
+/linkedin/
+/neeraj photo/
 *.md
