@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 28 1600 182" preserveAspectRatio="xMidYMax meet">
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14B8A6" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity=".10"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#F59E0B" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#FDE68A" stop-opacity=".35"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .s{stroke:#0F3B57;stroke-opacity:.50;stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round;fill:none;vector-effect:non-scaling-stroke}
+    .thin{stroke:#0F3B57;stroke-opacity:.34;stroke-width:1.1px;stroke-linecap:round;fill:none;vector-effect:non-scaling-stroke}
+    .guy{stroke:#0F3B57;stroke-opacity:.26;stroke-width:1px;stroke-dasharray:4 5;fill:none;vector-effect:non-scaling-stroke}
+    .pipe{stroke:#0D9488;stroke-opacity:.22;stroke-width:5px;fill:none;vector-effect:non-scaling-stroke}
+    .twin{stroke:#0D9488;stroke-opacity:.65;stroke-width:1.4px;stroke-dasharray:2 6;stroke-linecap:round;fill:none;vector-effect:non-scaling-stroke}
+    .node{fill:#fff;stroke:#0D9488;stroke-opacity:.95;stroke-width:1.6px;vector-effect:non-scaling-stroke}
+    .ring{fill:none;stroke:#14B8A6;stroke-width:1.5px;vector-effect:non-scaling-stroke}
+  </style>
+  <g transform="scale(.5)"><g id="unit">
+
+  <!-- ground + sea -->
+  <path class="s" d="M0 380H1310"/>
+  <path class="s" d="M1310 380q15 -9 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0"/>
+  <path class="thin" d="M1330 392q15 -8 30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0t30 0"/>
+  <!-- pipeline along the ground -->
+  <path class="pipe" d="M0 371H1300"/>
+  <g class="thin"><path d="M120 364v14M330 364v14M560 364v14M870 364v14M1100 364v14"/></g>
+
+  <!-- pumpjack -->
+  <g>
+    <rect class="s" fill="url(#body)" x="82" y="368" width="124" height="12" rx="2"/>
+    <path class="s" fill="url(#body)" d="M120 368L140 292L160 368Z"/>
+    <path class="thin" d="M127 342H153M133 318H147"/>
+    <path class="s" d="M60 284L212 301"/>
+    <path class="s" fill="url(#body)" d="M62 279Q38 290 42 324L66 324Q62 300 76 286Z"/>
+    <path class="thin" d="M54 324V368"/>
+    <circle class="s" fill="url(#body)" cx="206" cy="350" r="18"/>
+    <circle class="s" cx="206" cy="350" r="4"/>
+    <path class="s" d="M210 301L214 338"/>
+    <rect class="s" fill="url(#body)" x="166" y="352" width="22" height="16" rx="2"/>
+  </g>
+
+  <!-- storage tanks -->
+  <g>
+    <path class="s" fill="url(#body)" d="M262 380V314Q262 306 270 306H364Q372 306 372 314V380Z"/>
+    <path class="s" d="M262 314L317 294L372 314"/>
+    <path class="thin" d="M262 334H372M262 356H372M356 380L344 362L356 344L344 326"/>
+    <path class="s" fill="url(#body)" d="M392 380V296Q392 288 400 288H494Q502 288 502 296V380Z"/>
+    <path class="s" d="M392 296L447 270L502 296"/>
+    <path class="thin" d="M392 316H502M392 340H502M392 362H502M486 380L474 360L486 340L474 320"/>
+    <path class="s" fill="url(#body)" d="M522 380V324Q522 318 528 318H598Q604 318 604 324V380Z"/>
+    <path class="s" d="M522 324L563 306L604 324"/>
+    <path class="thin" d="M522 344H604M522 364H604"/>
+    <path class="thin" d="M372 372H392M502 372H522"/>
+  </g>
+
+  <!-- distillation columns -->
+  <g>
+    <path class="s" fill="url(#body)" d="M652 380V162Q652 142 675 142Q698 142 698 162V380Z"/>
+    <path class="thin" d="M648 192H702M648 232H702M648 272H702M648 312H702M648 350H702"/>
+    <path class="thin" d="M634 232H652M634 222V232M634 312H652M634 302V312"/>
+
+    <path class="s" fill="url(#body)" d="M722 380V116Q722 90 752 90Q782 90 782 116V380Z"/>
+    <path class="thin" d="M718 142H786M718 186H786M718 230H786M718 274H786M718 318H786M718 358H786"/>
+    <path class="s" d="M752 90V64M744 64H760"/>
+    <path class="thin" d="M786 230H804M804 222V230"/>
+
+    <path class="s" fill="url(#body)" d="M806 380V190Q806 172 826 172Q846 172 846 190V380Z"/>
+    <path class="thin" d="M802 212H850M802 252H850M802 292H850M802 332H850"/>
+
+    <path class="s" d="M698 202H722M782 160H806M675 142V118H700M846 352H880"/>
+  </g>
+
+  <!-- heat exchanger -->
+  <g>
+    <rect class="s" fill="url(#body)" x="880" y="336" width="96" height="30" rx="15"/>
+    <path class="thin" d="M902 336V366M954 336V366M902 366V380M954 366V380"/>
+  </g>
+
+  <!-- flare stack -->
+  <g>
+    <rect class="s" fill="url(#body)" x="1030" y="132" width="8" height="248" rx="2"/>
+    <path class="guy" d="M1034 200L990 380M1034 200L1078 380"/>
+    <path class="thin" d="M1022 156H1046M1024 156V150M1044 156V150"/>
+    <path fill="url(#flame)" stroke="#F59E0B" stroke-opacity=".55" stroke-width="1.6" d="M1034 130C1018 112 1024 94 1034 76C1032 92 1048 98 1048 112C1048 122 1042 128 1034 130Z"/>
+  </g>
+
+  <!-- spherical tanks -->
+  <g>
+    <circle class="s" fill="url(#body)" cx="1150" cy="322" r="48"/>
+    <path class="thin" d="M1102 322Q1150 338 1198 322M1150 274V256"/>
+    <path class="s" d="M1118 358L1110 380M1150 370V380M1182 358L1190 380"/>
+    <circle class="s" fill="url(#body)" cx="1252" cy="342" r="34"/>
+    <path class="thin" d="M1218 342Q1252 354 1286 342"/>
+    <path class="s" d="M1230 366L1224 380M1274 366L1280 380M1252 376V380"/>
+  </g>
+
+  <!-- offshore platform -->
+  <g>
+    <path class="s" d="M1360 264V404M1420 264V404M1480 264V404M1540 264V404"/>
+    <path class="thin" d="M1360 304L1420 352M1420 304L1360 352M1420 304L1480 352M1480 304L1420 352M1480 304L1540 352M1540 304L1480 352"/>
+    <rect class="s" fill="url(#body)" x="1338" y="250" width="224" height="14" rx="2"/>
+    <rect class="s" fill="url(#body)" x="1368" y="224" width="156" height="26" rx="2"/>
+    <path class="s" d="M1420 224L1440 118L1460 224"/>
+    <path class="thin" d="M1426 192H1454M1431 160H1449M1432 224L1458 192M1448 224L1422 192"/>
+    <path class="s" d="M1500 224V196L1562 168M1562 168V198"/>
+    <rect class="s" fill="url(#body)" x="1292" y="244" width="46" height="6" rx="2"/>
+    <path class="thin" d="M1316 244V232M1306 232H1326"/>
+  </g>
+
+  <!-- digital twin overlay: connected data nodes -->
+  <path class="twin" d="M140 292L317 294L447 270L675 142L752 64L826 172L1034 76L1150 256L1440 118"/>
+  <g>
+    <circle class="ring" cx="752" cy="64" r="10"><animate attributeName="r" values="8;22;8" dur="3.2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".6;0;.6" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle class="ring" cx="1034" cy="76" r="10"><animate attributeName="r" values="8;22;8" dur="3.2s" begin="1s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".6;0;.6" dur="3.2s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle class="ring" cx="1440" cy="118" r="10"><animate attributeName="r" values="8;22;8" dur="3.2s" begin="2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".6;0;.6" dur="3.2s" begin="2s" repeatCount="indefinite"/></circle>
+  </g>
+  <g>
+    <circle class="node" cx="140" cy="292" r="5"/>
+    <circle class="node" cx="317" cy="294" r="5"/>
+    <circle class="node" cx="447" cy="270" r="5"/>
+    <circle class="node" cx="675" cy="142" r="5"/>
+    <circle class="node" cx="752" cy="64" r="5"/>
+    <circle class="node" cx="826" cy="172" r="5"/>
+    <circle class="node" cx="1034" cy="76" r="5"/>
+    <circle class="node" cx="1150" cy="256" r="5"/>
+    <circle class="node" cx="1440" cy="118" r="5"/>
+  </g>
+</g></g>
+  <use xlink:href="#unit" href="#unit" transform="translate(1600 0) scale(-.5 .5)"/>
+</svg>
