@@ -435,7 +435,7 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
 .hero-vector{
   position:absolute; left:0; right:0; bottom:78px; z-index:0; pointer-events:none;
   aspect-ratio:1600/420;
-  background:url("../img/oilgas-skyline.svg") center bottom / 100% 100% no-repeat;
+  background:url("../img/oilgas-skyline.svg?v=20261121b") center bottom / 100% 100% no-repeat;
 }
 .hero2 .wrap{ position:relative; z-index:1; }
 .hero2:not(.hero2--page){ padding:150px 0 232px; }
@@ -446,7 +446,7 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
 .cta2{ padding-bottom:210px; }
 .cta2::after{
   content:""; position:absolute; left:0; right:0; bottom:0; height:clamp(150px,21vw,300px); z-index:-1; pointer-events:none;
-  background:url("../img/oilgas-skyline.svg") center bottom / 100% auto no-repeat;
+  background:url("../img/oilgas-skyline.svg?v=20261121b") center bottom / 100% auto no-repeat;
   filter:invert(1) brightness(1.4); opacity:.4;
   }
 @media (max-width:640px){ .cta2{ padding-bottom:150px; } }
@@ -597,3 +597,21 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
 .takeaways b{ display:block; font-family:var(--font-head); font-size:1.2rem; color:var(--teal-glow); margin-bottom:4px; }
 .takeaways span{ font-size:13.5px; line-height:1.4; color:#C5D6E3; }
 @media (max-width:640px){ .takeaways{ grid-template-columns:1fr; } }
+
+
+/* ===== Hero fits one screen; skyline lives in its own band below the content (final overrides) ===== */
+.hero2:not(.hero2--page){ padding:100px 0 218px; }
+.hero2 h1{ font-size:clamp(2rem,3.3vw,2.85rem); margin-bottom:16px; }
+.hero2 h1 .h1-name{ margin-bottom:12px; }
+.hero-badge{ margin-bottom:18px; padding:7px 14px; font-size:13px; }
+.hero-lead{ font-size:clamp(1.02rem,1.5vw,1.2rem); margin-bottom:16px; max-width:540px; }
+.hero-chips{ margin-bottom:22px; }
+.hero-cta{ margin-bottom:0; }
+.hero2 .portrait{ width:min(100%,370px); }
+@media (max-width:1020px){
+  .hero2:not(.hero2--page){ padding:112px 0 230px; }
+  .hero2 .portrait{ width:min(86%,380px); }
+}
+@media (max-width:640px){
+  .hero2:not(.hero2--page){ padding:100px 0 190px; }
+}
