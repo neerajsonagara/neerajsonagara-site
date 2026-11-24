@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Security: Content Security Policy + referrer policy (GitHub Pages cannot send custom HTTP headers, so these are set as meta tags) -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Why Digital Twin pilots never scale (and how to avoid pilot purgatory) | Neeraj Sonagara</title>
+<meta name="description" content="Why Digital Twin pilots in oil and gas stall after the demo, and how to design a pilot that scales across assets and business units. By Neeraj Sonagara.">
+<meta name="author" content="Neeraj Sonagara">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.neerajsonagara.com/articles/why-digital-twin-pilots-never-scale.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Digital Twin pilots never scale (and how to avoid pilot purgatory)">
+<meta property="og:description" content="Why Digital Twin pilots in oil and gas stall after the demo, and how to design a pilot that scales across assets and business units. By Neeraj Sonagara.">
+<meta property="og:url" content="https://www.neerajsonagara.com/articles/why-digital-twin-pilots-never-scale.html">
+<meta property="og:site_name" content="Neeraj Sonagara">
+<meta property="og:image" content="https://www.neerajsonagara.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Digital Twin pilots never scale (and how to avoid pilot purgatory)">
+<meta name="twitter:description" content="Why Digital Twin pilots in oil and gas stall after the demo, and how to design a pilot that scales across assets and business units. By Neeraj Sonagara.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1F33'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='700' fill='%2314B8A6' text-anchor='middle'%3ENS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261124b">
+<link rel="stylesheet" href="../assets/css/home.css?v=20261124b">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Why Digital Twin pilots never scale (and how to avoid pilot purgatory)",
+      "description": "Why Digital Twin pilots in oil and gas stall after the demo, and how to design a pilot that scales across assets and business units. By Neeraj Sonagara.",
+      "datePublished": "2026-11-24",
+      "dateModified": "2026-11-24",
+      "mainEntityOfPage": "https://www.neerajsonagara.com/articles/why-digital-twin-pilots-never-scale.html",
+      "image": "https://www.neerajsonagara.com/assets/img/og-image.jpg",
+      "author": { "@type": "Person", "@id": "https://www.neerajsonagara.com/#person", "name": "Neeraj Sonagara", "url": "https://www.neerajsonagara.com/" },
+      "publisher": { "@type": "Person", "@id": "https://www.neerajsonagara.com/#person", "name": "Neeraj Sonagara" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.neerajsonagara.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.neerajsonagara.com/#articles" },
+        { "@type": "ListItem", "position": 3, "name": "Why Digital Twin pilots never scale (and how to avoid pilot purgatory)" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="../index.html" class="brand" aria-label="Neeraj Sonagara — home">
+      <img class="brand-mark" src="../assets/img/headshot.jpg" alt="Neeraj Sonagara">
+      <span class="brand-name">Neeraj Sonagara</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../experience.html">Journey</a>
+      <a href="../index.html#credentials">Credentials</a>
+      <a href="../index.html#articles" class="active">Insights</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="../assets/docs/Neeraj_Sonagara_Resume.pdf" download>Resume</a>
+      <a class="btn btn-primary" href="../index.html#contact">Let's Connect</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <header class="arthead">
+    <div class="wrap">
+      <p class="crumb"><a href="../index.html">Home</a> &nbsp;/&nbsp; <a href="../index.html#articles">Insights</a></p>
+      <h1>Why Digital Twin pilots never scale (and how to avoid pilot purgatory)</h1>
+      <p class="art-meta"><span>By <b>Neeraj Sonagara</b></span><span>&middot;</span><span>Digital Twin &amp; Digital Transformation Consultant</span><span>&middot;</span><span>5 min read</span></p>
+    </div>
+  </header>
+
+  <article class="prose">
+
+<p class="lead">Many Digital Twin pilots impress in a demo and then stop. The pilot proved the technology could work. It never proved the organisation could run it.</p>
+<div class="takeaways"><div><b>Demo trap</b><span>Pilots run on hand-cleaned data</span></div><div><b>Repeatable</b><span>Design the pilot to be copied</span></div><div><b>Operating model</b><span>Ownership and support decide scale</span></div></div>
+
+
+<h2>Why pilots stall</h2>
+<ul>
+  <li><strong>The data was cleaned by hand</strong> for the pilot, and no one can repeat that at scale.</li>
+  <li><strong>The platform was chosen for the demo,</strong> not for the enterprise.</li>
+  <li><strong>There is no operating model:</strong> no owner, no support, no budget after the pilot.</li>
+  <li><strong>Integration is one-off,</strong> not a pattern other assets can reuse.</li>
+  <li><strong>Value was never measured,</strong> so there is nothing to justify the next step.</li>
+</ul>
+
+<h2>How to design a pilot that scales</h2>
+<ol>
+  <li><strong>Choose a representative asset,</strong> not the easiest one.</li>
+  <li><strong>Use real data and real integrations,</strong> built as a repeatable pattern.</li>
+  <li><strong>Build the information model once,</strong> so it can be reused across assets.</li>
+  <li><strong>Define success in numbers</strong> before you start: time saved, errors avoided, decisions improved.</li>
+  <li><strong>Plan the roll-out from day one,</strong> including ownership, governance and support.</li>
+  <li><strong>Train users and embed the tool</strong> in a daily workflow.</li>
+</ol>
+
+<div class="callout"><p>A pilot is not a smaller version of the project. It is the first copy of something you intend to repeat.</p></div>
+
+<h2>What scale looks like</h2>
+<p>Scaling a Digital Twin across many business units, systems and thousands of users depends far more on information discipline and governance than on the platform. See the <a href="../digital-twin.html">whitepaper</a> and <a href="why-digital-twin-programs-fail.html">why programs fail without an information foundation</a>.</p>
+
+  </article>
+
+  <aside class="article-cta">
+    <div>
+      <h2>Planning a Digital Twin or transformation program?</h2>
+      <p>I'm happy to talk it through. A short conversation often saves months.</p>
+      <a class="hbtn hbtn--primary" href="../index.html#contact">Get in touch</a>
+      <a class="hbtn hbtn--glass" href="../assets/docs/Neeraj_Sonagara_Resume.pdf" download>Download resume</a>
+    </div>
+  </aside>
+
+  <section class="related">
+    <h2>Keep reading</h2>
+    <a href="why-digital-twin-programs-fail.html">Why Digital Twin programs fail without an information foundation</a>
+    <a href="digital-twin-challenges-oil-and-gas.html">Digital Twin challenges in oil &amp; gas: 10 problems and how to solve them</a>
+    <a href="../digital-twin.html">The Digital Twin Information Philosophy (whitepaper)</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <strong>NEERAJ SONAGARA</strong>
+      <span>Digital Twin &amp; Digital Transformation Consultant</span>
+      <span class="footer-sub">Oil &amp; Gas | Enterprise Architecture | Industrial Data</span>
+    </div>
+    <nav aria-label="Footer">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../experience.html">Journey</a>
+      <a href="../digital-twin.html">Whitepaper</a>
+      <a href="../index.html#articles">Insights</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <a href="https://www.linkedin.com/in/neeraj-sonagara-45359984/" target="_blank" rel="me noopener">LinkedIn</a>
+    <span>&copy; <span id="year"></span> Neeraj Sonagara. All rights reserved.</span>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>

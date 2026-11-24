@@ -435,7 +435,7 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
 .hero-vector{
   position:absolute; left:0; right:0; bottom:78px; z-index:0; pointer-events:none;
   aspect-ratio:1600/420;
-  background:url("../img/oilgas-skyline.svg?v=20261121b") center bottom / 100% 100% no-repeat;
+  background:url("../img/oilgas-skyline.svg?v=20261124b") center bottom / 100% 100% no-repeat;
 }
 .hero2 .wrap{ position:relative; z-index:1; }
 .hero2:not(.hero2--page){ padding:150px 0 232px; }
@@ -446,7 +446,7 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
 .cta2{ padding-bottom:210px; }
 .cta2::after{
   content:""; position:absolute; left:0; right:0; bottom:0; height:clamp(150px,21vw,300px); z-index:-1; pointer-events:none;
-  background:url("../img/oilgas-skyline.svg?v=20261121b") center bottom / 100% auto no-repeat;
+  background:url("../img/oilgas-skyline.svg?v=20261124b") center bottom / 100% auto no-repeat;
   filter:invert(1) brightness(1.4); opacity:.4;
   }
 @media (max-width:640px){ .cta2{ padding-bottom:150px; } }
@@ -614,4 +614,44 @@ a.art-item:hover{ transform:translateY(-3px); border-color:var(--teal); }
 }
 @media (max-width:640px){
   .hero2:not(.hero2--page){ padding:100px 0 190px; }
+}
+
+
+/* ===== Insights hub ===== */
+.hub-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.hub-card{ display:flex; flex-direction:column; gap:10px; padding:28px; border-radius:22px; background:#fff; border:1px solid var(--line); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.hub-card:hover{ transform:translateY(-5px); box-shadow:0 22px 50px rgba(10,31,51,.1); border-color:var(--teal); }
+.hub-card em{ font-style:normal; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--teal-dark); }
+.hub-card h2{ font-size:1.15rem; line-height:1.3; margin:0; color:var(--ink); }
+.hub-card span{ margin-top:auto; padding-top:8px; font-weight:700; font-size:14px; color:var(--teal-dark); }
+.hub-card:first-child{ background:linear-gradient(160deg,#0B2540,#071827); border-color:transparent; }
+.hub-card:first-child em{ color:var(--teal-glow); } .hub-card:first-child h2{ color:#fff; } .hub-card:first-child span{ color:var(--teal-glow); }
+@media (max-width:1020px){ .hub-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:640px){ .hub-grid{ grid-template-columns:1fr; } }
+
+
+/* ===== Oil & gas challenges (pain points) ===== */
+.pain-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.pain{ background:#fff; border:1px solid var(--line); border-radius:22px; padding:26px 22px; display:flex; flex-direction:column; gap:8px; transition:transform .25s ease, box-shadow .25s ease; }
+.pain:hover{ transform:translateY(-5px); box-shadow:0 22px 50px rgba(10,31,51,.1); }
+.pain-ico{ width:52px; height:52px; border-radius:16px; display:grid; place-items:center; margin-bottom:6px; background:linear-gradient(135deg,#FEF3C7,#FDE68A); color:#7A5200; }
+.pain-ico svg{ width:26px; height:26px; }
+.pain h3{ font-size:1.05rem; line-height:1.3; margin:0; color:var(--ink); }
+.pain p{ margin:0; font-size:14px; color:var(--muted); }
+.pain-fix{ margin-top:auto; padding-top:12px; font-size:13px; font-weight:600; color:var(--teal-dark); display:flex; gap:8px; align-items:baseline; border-top:1px dashed var(--line); }
+.pain-fix b{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#fff; background:var(--teal); padding:3px 8px; border-radius:999px; }
+.kw{ margin-top:44px; text-align:center; }
+.kw-label{ font-size:12.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal-dark); margin:0 0 14px; }
+.kw-cloud{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:980px; margin:0 auto; }
+.kw-cloud span{ padding:8px 16px; border-radius:999px; background:var(--soft); border:1px solid var(--line); font-size:13.5px; font-weight:600; color:#2E4659; }
+.kw-cloud span:nth-child(-n+2){ background:linear-gradient(135deg,#2DD4C4,#14B8A6); color:#04201c; border-color:transparent; }
+.art-item--all{ background:linear-gradient(135deg,#0B2540,#12365a); border-color:transparent; }
+.art-item--all em{ color:var(--teal-glow); } .art-item--all h3{ color:#fff; }
+@media (max-width:1020px){ .pain-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:640px){ .pain-grid{ grid-template-columns:1fr; } }
+
+/* Long button labels may wrap on small screens */
+@media (max-width:640px){
+  .hbtn{ white-space:normal; text-align:center; line-height:1.3; }
+  .work-more .hbtn{ width:100%; margin-bottom:10px; }
 }

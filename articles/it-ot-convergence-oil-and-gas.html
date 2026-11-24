@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Security: Content Security Policy + referrer policy (GitHub Pages cannot send custom HTTP headers, so these are set as meta tags) -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>IT/OT convergence in oil &amp; gas: why it is hard and how to start | Neeraj Sonagara</title>
+<meta name="description" content="Why IT/OT convergence is difficult in oil and gas, and a practical way to connect SCADA, DCS and historians with enterprise systems and a Digital Twin. By Neeraj Sonagara.">
+<meta name="author" content="Neeraj Sonagara">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.neerajsonagara.com/articles/it-ot-convergence-oil-and-gas.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IT/OT convergence in oil &amp; gas: why it is hard and how to start">
+<meta property="og:description" content="Why IT/OT convergence is difficult in oil and gas, and a practical way to connect SCADA, DCS and historians with enterprise systems and a Digital Twin. By Neeraj Sonagara.">
+<meta property="og:url" content="https://www.neerajsonagara.com/articles/it-ot-convergence-oil-and-gas.html">
+<meta property="og:site_name" content="Neeraj Sonagara">
+<meta property="og:image" content="https://www.neerajsonagara.com/assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IT/OT convergence in oil &amp; gas: why it is hard and how to start">
+<meta name="twitter:description" content="Why IT/OT convergence is difficult in oil and gas, and a practical way to connect SCADA, DCS and historians with enterprise systems and a Digital Twin. By Neeraj Sonagara.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A1F33'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='700' fill='%2314B8A6' text-anchor='middle'%3ENS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=20261124b">
+<link rel="stylesheet" href="../assets/css/home.css?v=20261124b">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "IT/OT convergence in oil & gas: why it is hard and how to start",
+      "description": "Why IT/OT convergence is difficult in oil and gas, and a practical way to connect SCADA, DCS and historians with enterprise systems and a Digital Twin. By Neeraj Sonagara.",
+      "datePublished": "2026-11-24",
+      "dateModified": "2026-11-24",
+      "mainEntityOfPage": "https://www.neerajsonagara.com/articles/it-ot-convergence-oil-and-gas.html",
+      "image": "https://www.neerajsonagara.com/assets/img/og-image.jpg",
+      "author": { "@type": "Person", "@id": "https://www.neerajsonagara.com/#person", "name": "Neeraj Sonagara", "url": "https://www.neerajsonagara.com/" },
+      "publisher": { "@type": "Person", "@id": "https://www.neerajsonagara.com/#person", "name": "Neeraj Sonagara" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.neerajsonagara.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.neerajsonagara.com/#articles" },
+        { "@type": "ListItem", "position": 3, "name": "IT/OT convergence in oil & gas: why it is hard and how to start" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="../index.html" class="brand" aria-label="Neeraj Sonagara — home">
+      <img class="brand-mark" src="../assets/img/headshot.jpg" alt="Neeraj Sonagara">
+      <span class="brand-name">Neeraj Sonagara</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="../index.html#services">Services</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../experience.html">Journey</a>
+      <a href="../index.html#credentials">Credentials</a>
+      <a href="../index.html#articles" class="active">Insights</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-ghost" href="../assets/docs/Neeraj_Sonagara_Resume.pdf" download>Resume</a>
+      <a class="btn btn-primary" href="../index.html#contact">Let's Connect</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <header class="arthead">
+    <div class="wrap">
+      <p class="crumb"><a href="../index.html">Home</a> &nbsp;/&nbsp; <a href="../index.html#articles">Insights</a></p>
+      <h1>IT/OT convergence in oil &amp; gas: why it is hard and how to start</h1>
+      <p class="art-meta"><span>By <b>Neeraj Sonagara</b></span><span>&middot;</span><span>Digital Twin &amp; Digital Transformation Consultant</span><span>&middot;</span><span>5 min read</span></p>
+    </div>
+  </header>
+
+  <article class="prose">
+
+<p class="lead">IT and OT run the same company with different priorities. Joining them is less a technology problem than an agreement problem about data, ownership and risk.</p>
+<div class="takeaways"><div><b>Two worlds</b><span>Different goals, tools and risk</span></div><div><b>Start small</b><span>One use case, read-only data first</span></div><div><b>Shared model</b><span>One asset hierarchy for both sides</span></div></div>
+
+
+<h2>Why it is hard</h2>
+<ul>
+  <li><strong>Different priorities.</strong> OT protects safety and availability. IT protects data and cost.</li>
+  <li><strong>Different tag structures.</strong> A control-system tag and a maintenance equipment ID rarely match.</li>
+  <li><strong>Silos.</strong> Historians, SCADA and DCS sit apart from CMMS, ERP and engineering systems.</li>
+  <li><strong>Security concerns.</strong> Connecting control networks to enterprise networks needs care.</li>
+  <li><strong>No joint ownership.</strong> Nobody is responsible for the data between the two.</li>
+</ul>
+
+<h2>How to start</h2>
+<ol>
+  <li><strong>Pick one use case</strong> with clear value, for example condition data for maintenance decisions.</li>
+  <li><strong>Agree a shared asset hierarchy and tag model</strong> that maps control tags to equipment and documents.</li>
+  <li><strong>Move data one way first.</strong> Read from OT into an integration layer before considering anything that writes back.</li>
+  <li><strong>Use open interfaces</strong> such as OPC UA, MQTT and REST APIs through a governed layer.</li>
+  <li><strong>Protect the boundary.</strong> Segment networks and apply recognised OT security practice such as IEC 62443.</li>
+  <li><strong>Set shared governance</strong> so IT and OT agree who owns quality, access and change.</li>
+</ol>
+
+<div class="callout"><p>Real-time data without asset context is just numbers. The value comes from tying it to the equipment, documents and maintenance history around it.</p></div>
+
+<h2>How it connects to a Digital Twin</h2>
+<p>A Digital Twin is where the two sides meet: live operational data placed in the context of engineering and business information. See <a href="digital-twin-vs-digital-model.html">Digital Twin vs digital model</a> and the <a href="digital-twin-challenges-oil-and-gas.html">10 common challenges</a>.</p>
+
+  </article>
+
+  <aside class="article-cta">
+    <div>
+      <h2>Planning a Digital Twin or transformation program?</h2>
+      <p>I'm happy to talk it through. A short conversation often saves months.</p>
+      <a class="hbtn hbtn--primary" href="../index.html#contact">Get in touch</a>
+      <a class="hbtn hbtn--glass" href="../assets/docs/Neeraj_Sonagara_Resume.pdf" download>Download resume</a>
+    </div>
+  </aside>
+
+  <section class="related">
+    <h2>Keep reading</h2>
+    <a href="digital-twin-challenges-oil-and-gas.html">Digital Twin challenges in oil &amp; gas: 10 problems and how to solve them</a>
+    <a href="digital-twin-vs-digital-model.html">Digital Twin vs digital model: what actually creates business value?</a>
+    <a href="../digital-twin.html">The Digital Twin Information Philosophy (whitepaper)</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <strong>NEERAJ SONAGARA</strong>
+      <span>Digital Twin &amp; Digital Transformation Consultant</span>
+      <span class="footer-sub">Oil &amp; Gas | Enterprise Architecture | Industrial Data</span>
+    </div>
+    <nav aria-label="Footer">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#services">Services</a>
+      <a href="../experience.html">Journey</a>
+      <a href="../digital-twin.html">Whitepaper</a>
+      <a href="../index.html#articles">Insights</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <a href="https://www.linkedin.com/in/neeraj-sonagara-45359984/" target="_blank" rel="me noopener">LinkedIn</a>
+    <span>&copy; <span id="year"></span> Neeraj Sonagara. All rights reserved.</span>
+  </div>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
